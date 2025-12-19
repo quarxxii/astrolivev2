@@ -48,12 +48,11 @@ function App() {
     { id: 'dQw4w9WgXcQ', title: 'Server Trailer 2025' },
     { id: 'jNQXAC9IVRw', title: 'Community Highlights' },
     { id: '9bZkp7q19f0', title: 'Event Highlights' },
-    { id: 'u31qwQUeGuM', title: 'Video oben' },
-
+    
   ];
 
   // ✅ Featured Video nutzt jetzt auch eine Video-ID (z.B. das erste aus der Galerie)
-  const featuredVideo = galleryVideos[3]; // oder: { id: 'X85JFedigjc', title: '...' }
+  const featuredVideo = galleryVideos[0]; // oder: { id: 'X85JFedigjc', title: '...' }
 
   if (currentPage === 'highlights') {
     return (
