@@ -14,17 +14,30 @@
 }
 
 @layer utilities {
+  /* ===== GRID BACKGROUND ===== */
   .bg-grid-pattern {
     background-image:
-      linear-gradient(to right, rgba(0, 255, 204, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 255, 204, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
+      /* feine Linien */
+      linear-gradient(to right, rgba(156, 53, 218, 0.10) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(156, 53, 218, 0.10) 1px, transparent 1px),
+
+      /* stärkere Linien alle 5 Felder */
+      linear-gradient(to right, rgba(156, 53, 218, 0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(156, 53, 218, 0.18) 1px, transparent 1px);
+
+    background-size:
+      50px 50px,
+      50px 50px,
+      250px 250px,
+      250px 250px;
   }
 
+  /* ===== RADIAL GRADIENT ===== */
   .bg-gradient-radial {
     background: radial-gradient(circle at center, var(--tw-gradient-stops));
   }
 
+  /* ===== ANIMATIONS ===== */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -56,6 +69,7 @@
   }
 }
 
+/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -65,11 +79,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00ffcc 0%, #00e5cc 100%);
+  background: linear-gradient(180deg, #9c35da 0%, #4467db 100%);
   border-radius: 6px;
   border: 2px solid #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #00e5cc 0%, #00ccb3 100%);
+  background: linear-gradient(180deg, #8828c9 0%, #3756ca 100%);
 }

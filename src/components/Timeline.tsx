@@ -41,7 +41,7 @@ export default function Timeline({ items }: TimelineProps) {
 
   return (
     <div className="relative">
-      <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500/20 via-cyan-500/60 to-cyan-500/20"></div>
+      <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#9c35da]/20 via-[#7051d8]/60 to-[#4467db]/20"></div>
 
       <div className="space-y-8">
         {items.map((item, index) => (
@@ -58,18 +58,18 @@ export default function Timeline({ items }: TimelineProps) {
             <div
               className={`absolute left-0 w-8 h-8 rounded-full border-4 border-[#0a0a0a] ${
                 item.isCurrent
-                  ? 'bg-cyan-400 shadow-[0_0_20px_rgba(0,255,204,0.6)]'
-                  : 'bg-cyan-500 shadow-[0_0_15px_rgba(0,255,204,0.4)]'
+                  ? 'bg-[#9c35da] shadow-[0_0_20px_rgba(156,53,218,0.6)]'
+                  : 'bg-[#7051d8] shadow-[0_0_15px_rgba(112,81,216,0.4)]'
               } transition-all duration-300`}
             ></div>
 
             <div className="space-y-2">
-              <p className="text-cyan-400 text-sm font-semibold tracking-wider">
+              <p className="text-[#9c35da] text-sm font-semibold tracking-wider">
                 {item.date}
               </p>
               <h3
                 className={`text-xl font-bold text-white ${
-                  item.isCurrent ? 'text-cyan-400' : ''
+                  item.isCurrent ? 'text-[#9c35da]' : ''
                 }`}
               >
                 {item.title}
